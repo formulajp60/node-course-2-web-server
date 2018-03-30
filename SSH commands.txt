@@ -1,0 +1,26 @@
+ls -al ~/.ssh
+ssh-keygen -t rsa -b 4096 -C 'formulajp60@gmail.com'
+
+ls -al ~/.ssh
+eval "$(ssh-agent -s)"
+
+ssh-add
+
+
+// add ssh to gitHub
+
+clip < ~/.ssh/id_rsa.pub
+
+//check ssh
+
+ssh -T git@github.com
+
+
+
+/// heroku
+heroku help
+heroku login
+keys:add
+
+ssh -v git@heroku.com
+

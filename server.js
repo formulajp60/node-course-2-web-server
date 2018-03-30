@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs'); // handlebars js
 const fs = require('fs');
 
+const port = process.env.PORT || 3000; // heroku port
+
 var app = express();
 
 // add support for partials
@@ -80,6 +82,6 @@ app.get('/bad', (req, res)=> {
 })
 
 //bind app to port
-app.listen(3000, ()=> {
-    console.log('Server is up on port 3000')
+app.listen(port, ()=> {
+    console.log(`Server is up on port ${port}`);
 });
